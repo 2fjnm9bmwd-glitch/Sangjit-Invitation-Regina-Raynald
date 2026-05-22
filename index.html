@@ -116,7 +116,7 @@
         .shuangxi-icon {
             font-size: 6rem;
             color: var(--gold-shimmer);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             animation: float 3s ease-in-out infinite;
         }
 
@@ -133,6 +133,7 @@
             letter-spacing: 8px;
             text-transform: uppercase;
             font-size: 0.9rem;
+            margin-bottom: 40px;
         }
 
         .guest-label {
@@ -420,27 +421,24 @@
 
     <!-- PAGE 1 -->
 
-    <div class="page active" id="page1">
+    <div id="page1" class="page active">
 
         <div class="intro-container">
+
+            <div class="corner-line cl-tl"></div>
+            <div class="corner-line cl-tr"></div>
+            <div class="corner-line cl-bl"></div>
+            <div class="corner-line cl-br"></div>
 
             <div class="shuangxi-icon">囍</div>
 
             <p class="intro-title">You're Invited</p>
 
-            <p class="guest-label">Dear,</p>
-
-            <h2 class="guest-name" id="guestName">
-                Special Guest
-            </h2>
-
             <h1 class="couple-name-intro">
-                Regina <br>&<br> Raynald
+                Regina<br>&<br>Raynald
             </h1>
 
-            <p class="intro-date">
-                July 19th, 2026
-            </p>
+            <p class="intro-date">July 19th, 2026</p>
 
             <div class="open-btn">
                 <button onclick="goToPage2()">
@@ -535,13 +533,6 @@
                             type="text"
                             name="name"
                             placeholder="Your Name"
-                            required
-                        >
-
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Your Email"
                             required
                         >
 
