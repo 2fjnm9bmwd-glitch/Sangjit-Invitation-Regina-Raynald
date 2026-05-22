@@ -347,8 +347,6 @@
             outline: none;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.95rem;
-            position: relative;
-            z-index: 10;
         }
 
         .rsvp-form textarea {
@@ -433,7 +431,7 @@
             <p class="guest-label">Dear,</p>
 
             <h2 class="guest-name" id="guestName">
-                The Jonathan Family
+                Special Guest
             </h2>
 
             <h1 class="couple-name-intro">
@@ -540,6 +538,13 @@
                             required
                         >
 
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            required
+                        >
+
                         <select
                             name="attendance"
                             required
@@ -587,12 +592,18 @@
 
     <script>
 
-        // CHANGE GUEST NAME HERE
-        const familyName = "The Jonathan Family";
+        // AUTO GUEST NAME FROM URL
+        // Example:
+        // yourwebsite.com/?to=The%20Lahope%20Family
+
+        const params = new URLSearchParams(window.location.search);
+
+        const familyName = params.get("to") || "Special Guest";
 
         document.getElementById("guestName").innerText = familyName;
 
         // MUSIC
+
         const music = document.getElementById("bgMusic");
         const musicBtn = document.getElementById("musicBtn");
 
@@ -611,7 +622,9 @@
             } else {
 
                 music.play();
+
                 musicBtn.classList.add("playing");
+
                 isPlaying = true;
             }
 
@@ -620,6 +633,7 @@
         function goToPage2() {
 
             document.getElementById("page1").classList.remove("active");
+
             document.getElementById("page2").classList.add("active");
 
             if (!isPlaying) {
