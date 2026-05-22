@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regina & Raynald Sangjit Invitation</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
     <style>
+
         :root {
             --maroon-deep: #5D0016;
             --maroon-rich: #800020;
@@ -26,6 +28,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background: linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon-rich) 100%);
@@ -37,6 +43,7 @@
         }
 
         /* MUSIC BUTTON */
+
         .music-btn {
             position: fixed;
             top: 20px;
@@ -67,17 +74,28 @@
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(128, 0, 32, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(128, 0, 32, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(128, 0, 32, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(128, 0, 32, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(128, 0, 32, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(128, 0, 32, 0);
+            }
         }
 
         @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
-        /* PAGE CONTAINERS */
+        /* PAGE */
+
         .page {
             display: none;
             width: 100%;
@@ -88,31 +106,38 @@
 
         .page.active {
             display: flex;
-            animation: fadeIn 0.5s ease;
+            animation: fadeIn 0.8s ease;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* INTRO PAGE */
+        /* INTRO */
+
         .intro-container {
             text-align: center;
             color: var(--cream-ivory);
             padding: 20px;
+            position: relative;
         }
 
         .shuangxi-icon {
             font-size: 6rem;
-            font-family: 'Playfair Display', serif;
             color: var(--gold-shimmer);
             margin-bottom: 40px;
-            animation: scaleIn 1.5s ease-out, float 3s ease-in-out infinite 1.5s;
+            animation: scaleIn 1.5s ease-out,
+                       float 3s ease-in-out infinite 1.5s;
         }
 
         .intro-title {
-            font-family: 'Montserrat', sans-serif;
             font-size: 0.9rem;
             letter-spacing: 8px;
             text-transform: uppercase;
@@ -139,11 +164,9 @@
         }
 
         .open-btn button {
-            display: inline-block;
             padding: 15px 40px;
             background-color: var(--gold-shimmer);
             color: var(--maroon-deep);
-            font-family: 'Montserrat', sans-serif;
             font-size: 0.8rem;
             letter-spacing: 3px;
             text-transform: uppercase;
@@ -153,7 +176,7 @@
         }
 
         .open-btn button:hover {
-            background-color: transparent;
+            background: transparent;
             color: var(--gold-shimmer);
         }
 
@@ -161,17 +184,42 @@
             position: absolute;
             width: 60px;
             height: 60px;
-            border: 1px solid rgba(201, 169, 98, 0.3);
+            border: 1px solid rgba(201,169,98,0.3);
         }
-        .cl-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
-        .cl-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
-        .cl-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
-        .cl-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
 
-        /* INVITATION CARD */
+        .cl-tl {
+            top: 20px;
+            left: 20px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .cl-tr {
+            top: 20px;
+            right: 20px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .cl-bl {
+            bottom: 20px;
+            left: 20px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .cl-br {
+            bottom: 20px;
+            right: 20px;
+            border-left: none;
+            border-top: none;
+        }
+
+        /* CARD */
+
         .invite-container {
             background-color: var(--cream-ivory);
-            max-width: 800px;
+            max-width: 850px;
             width: 100%;
             position: relative;
             box-shadow: 0 25px 50px rgba(0,0,0,0.3);
@@ -208,8 +256,6 @@
         .shuangxi {
             font-size: 3.5rem;
             color: var(--maroon-rich);
-            font-family: 'Playfair Display', serif;
-            font-weight: bold;
             letter-spacing: 15px;
         }
 
@@ -239,8 +285,8 @@
             font-size: 1.2rem;
             font-style: italic;
             color: var(--gold-shimmer);
-            margin: 5px 0 30px 0;
             display: block;
+            margin: 5px 0 30px;
         }
 
         .divider-elegant {
@@ -254,13 +300,16 @@
         .divider-line {
             width: 80px;
             height: 1px;
-            background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+            background: linear-gradient(to right,
+            transparent,
+            var(--gold-light),
+            transparent);
         }
 
         .divider-dot {
             width: 6px;
             height: 6px;
-            background-color: var(--gold-shimmer);
+            background: var(--gold-shimmer);
             border-radius: 50%;
         }
 
@@ -271,8 +320,10 @@
             color: var(--text-dark);
             line-height: 2;
             max-width: 500px;
-            margin: 0 auto;
+            margin: auto;
         }
+
+        /* DETAILS */
 
         .details-section {
             display: flex;
@@ -321,10 +372,82 @@
             line-height: 1.6;
         }
 
+        /* RSVP */
+
+        .rsvp-section {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .rsvp-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--maroon-rich);
+            margin-bottom: 15px;
+        }
+
+        .rsvp-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .rsvp-form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .rsvp-form input,
+        .rsvp-form select,
+        .rsvp-form textarea {
+            width: 100%;
+            padding: 15px 18px;
+            border: 1px solid var(--gold-light);
+            background: rgba(255,255,255,0.7);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .rsvp-form input:focus,
+        .rsvp-form select:focus,
+        .rsvp-form textarea:focus {
+            border-color: var(--gold-shimmer);
+            box-shadow: 0 0 10px rgba(201,169,98,0.2);
+        }
+
+        .rsvp-form textarea {
+            resize: none;
+        }
+
+        .rsvp-form button {
+            padding: 15px;
+            background-color: var(--maroon-rich);
+            color: var(--cream-ivory);
+            border: 1px solid var(--maroon-rich);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .rsvp-form button:hover {
+            background: transparent;
+            color: var(--maroon-rich);
+        }
+
+        /* FOOTER */
+
         .footer {
             background-color: var(--maroon-rich);
             color: var(--cream-ivory);
-            margin: 0 -50px -50px -50px;
+            margin: 50px -50px -50px;
             padding: 30px;
             text-align: center;
             position: relative;
@@ -339,71 +462,122 @@
             background-color: var(--cream-ivory);
             padding: 0 10px;
             color: var(--maroon-rich);
-            font-size: 1.2rem;
         }
 
         .dress-code {
             font-size: 0.7rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            opacity: 0.8;
         }
 
-        /* ANIMATIONS */
+        /* ANIMATION */
+
         @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.5); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            0%,100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         /* MOBILE */
+
         @media (max-width: 600px) {
-            .shuangxi-icon { font-size: 4rem; }
-            .couple-name-intro { font-size: 2.8rem; }
-            .couple-names { font-size: 3.2rem; }
-            .shuangxi { font-size: 2.5rem; letter-spacing: 10px; }
-            .detail-box { border-right: none !important; border-bottom: 1px solid var(--gold-light); }
-            .invite-container { padding: 30px 20px; }
-            .footer { margin: 0 -20px -30px -20px; }
+
+            .shuangxi-icon {
+                font-size: 4rem;
+            }
+
+            .couple-name-intro {
+                font-size: 2.8rem;
+            }
+
+            .couple-names {
+                font-size: 3.2rem;
+            }
+
+            .shuangxi {
+                font-size: 2.5rem;
+            }
+
+            .invite-container {
+                padding: 30px 20px;
+            }
+
+            .footer {
+                margin: 50px -20px -30px;
+            }
+
+            .detail-box:first-child {
+                border-right: none;
+                border-bottom: 1px solid var(--gold-light);
+            }
         }
+
     </style>
 </head>
+
 <body>
 
     <!-- MUSIC BUTTON -->
+
     <div class="music-btn" id="musicBtn" onclick="toggleMusic()">♫</div>
 
     <!-- AUDIO -->
+
     <audio id="bgMusic" loop>
         <source src="[HanziPinyinEnglishIndo] Zhang Yi Hao - Forever Star [Hidden Love OST].mp3" type="audio/mp3">
     </audio>
 
-    <!-- ========== PAGE 1: INTRO ========== -->
+    <!-- PAGE 1 -->
+
     <div id="page1" class="page active">
+
         <div class="intro-container">
+
             <div class="corner-line cl-tl"></div>
             <div class="corner-line cl-tr"></div>
             <div class="corner-line cl-bl"></div>
             <div class="corner-line cl-br"></div>
 
             <div class="shuangxi-icon">囍</div>
+
             <p class="intro-title">You're Invited</p>
-            <h1 class="couple-name-intro">Regina<br>&<br>Raynald</h1>
+
+            <h1 class="couple-name-intro">
+                Regina<br>&<br>Raynald
+            </h1>
+
             <p class="intro-date">July 19th, 2026</p>
 
             <div class="open-btn">
-                <button onclick="goToPage2()">Open Invitation</button>
+                <button onclick="goToPage2()">
+                    Open Invitation
+                </button>
             </div>
+
         </div>
+
     </div>
 
-    <!-- ========== PAGE 2: INVITATION ========== -->
+    <!-- PAGE 2 -->
+
     <div id="page2" class="page">
+
         <div class="invite-container">
+
             <div class="border-frame"></div>
             <div class="border-inner"></div>
 
@@ -412,8 +586,14 @@
             </div>
 
             <div class="content">
+
                 <p class="parents-text">The Sangjit of</p>
-                <h1 class="couple-names">Regina <span class="and-text">and</span> Raynald</h1>
+
+                <h1 class="couple-names">
+                    Regina
+                    <span class="and-text">and</span>
+                    Raynald
+                </h1>
 
                 <div class="divider-elegant">
                     <span class="divider-line"></span>
@@ -422,33 +602,118 @@
                 </div>
 
                 <p class="invite-message">
-                    With joyful hearts, we invite you to share in the celebration of our union.<br><br>
+                    With joyful hearts, we invite you to share in the celebration of our union.
+                    <br><br>
                     Your presence would make this moment even more precious.
                 </p>
 
+                <!-- DETAILS -->
+
                 <div class="details-section">
+
                     <div class="detail-box">
+
                         <p class="detail-label">When</p>
+
                         <p class="detail-value">Sunday</p>
+
                         <p class="detail-sub">July 19th, 2026</p>
+
                         <p class="detail-sub">at 15:00 WITA</p>
+
                     </div>
 
                     <div class="detail-box">
+
                         <p class="detail-label">Where</p>
-                        <p class="detail-value">Manado Convention Centre</p>
-                        <p class="detail-address">Java Bali Hall</p>
+
+                        <p class="detail-value">
+                            Manado Convention Centre
+                        </p>
+
+                        <p class="detail-address">
+                            Java Bali Hall
+                        </p>
+
                     </div>
+
                 </div>
+
+                <!-- RSVP -->
+
+                <div class="rsvp-section">
+
+                    <div class="divider-elegant">
+                        <span class="divider-line"></span>
+                        <span class="divider-dot"></span>
+                        <span class="divider-line"></span>
+                    </div>
+
+                    <h2 class="rsvp-title">RSVP</h2>
+
+                    <p class="rsvp-text">
+                        Kindly let us know your attendance.<br>
+                        We would be delighted to celebrate this special moment with you.
+                    </p>
+
+                    <form class="rsvp-form"
+                          action="https://formspree.io/f/mbdbovpy"
+                          method="POST">
+
+                        <input type="text"
+                               name="name"
+                               placeholder="Your Name"
+                               required>
+
+                        <input type="email"
+                               name="email"
+                               placeholder="Your Email"
+                               required>
+
+                        <select name="attendance" required>
+
+                            <option value="">
+                                Will you attend?
+                            </option>
+
+                            <option value="Yes, gladly attending">
+                                Yes, gladly attending
+                            </option>
+
+                            <option value="Sorry, unable to attend">
+                                Sorry, unable to attend
+                            </option>
+
+                        </select>
+
+                        <textarea name="message"
+                                  rows="4"
+                                  placeholder="Write your wishes here..."></textarea>
+
+                        <button type="submit">
+                            Send RSVP
+                        </button>
+
+                    </form>
+
+                </div>
+
             </div>
+
+            <!-- FOOTER -->
 
             <div class="footer">
-                <p class="dress-code">Dresscode: Peach, Beige & Brown</p>
+                <p class="dress-code">
+                    Dresscode: Peach, Beige & Brown
+                </p>
             </div>
+
         </div>
+
     </div>
 
     <script>
+
         var music = document.getElementById('bgMusic');
         var musicBtn = document.getElementById('musicBtn');
         var isPlaying = false;
@@ -456,11 +721,15 @@
         music.volume = 0.3;
 
         function toggleMusic() {
+
             if (isPlaying) {
+
                 music.pause();
                 musicBtn.classList.remove('playing');
                 isPlaying = false;
+
             } else {
+
                 music.play();
                 musicBtn.classList.add('playing');
                 isPlaying = true;
@@ -468,31 +737,36 @@
         }
 
         function goToPage2() {
+
             document.getElementById('page1').classList.remove('active');
             document.getElementById('page2').classList.add('active');
-            // Keep music playing!
+
             if (!isPlaying) {
+
                 music.play();
+                musicBtn.classList.add('playing');
                 isPlaying = true;
             }
         }
 
-        // Try autoplay
         window.onload = function() {
+
             music.play().catch(function() {
-                console.log('Click to play');
+                console.log('Autoplay blocked');
             });
         };
 
-        // Allow click anywhere to play
         document.body.addEventListener('click', function() {
+
             if (!isPlaying) {
+
                 music.play();
                 musicBtn.classList.add('playing');
                 isPlaying = true;
             }
         });
+
     </script>
 
 </body>
-</html> 
+</html>
